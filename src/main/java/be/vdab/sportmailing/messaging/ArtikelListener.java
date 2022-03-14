@@ -21,7 +21,7 @@ public class ArtikelListener {
         this.sporterMailing = sporterMailing;
     }
 
-    //todo: waar ligt de koppeling met RabbitMQ precies? is dat hier?
+    //RabbitMQ dependency met deze annotation zorgt voor koppeling met exchange en zijn queue(s)? berichten worden hier een per een ontvangen
     @RabbitListener(queues = "sportartikels")
     void verwerkBericht(ArtikelGemaakt artikelGemaakt) {
 //        var sporters = sporterService.findAll();
